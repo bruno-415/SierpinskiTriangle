@@ -1,4 +1,3 @@
-
 private int len = 400;
 private int baseCase = len;
 private boolean increaseBaseCase = false;
@@ -16,9 +15,9 @@ public void mouseClicked(){
   if(baseCase >= len)
     increaseBaseCase = false;
   if(increaseBaseCase)
-    baseCase += 20;
+    baseCase += 40;
   else
-    baseCase -= 20;
+    baseCase -= 40;
 }
 public void sierpinski(int len, int x, int y) {
   if(len <= baseCase)
