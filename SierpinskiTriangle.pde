@@ -10,17 +10,15 @@ public void draw(){
   background(0);
   sierpinski(len, 50, 450);
 }
-public void mouseDragged(){
-  if(baseCase <= 0) {
-    baseCase = 0;
+public void mouseClicked(){
+  if(baseCase <= 0)
     increaseBaseCase = true;
-  }
   if(baseCase >= len)
     increaseBaseCase = false;
   if(increaseBaseCase)
-    baseCase += 5;
+    baseCase += 20;
   else
-    baseCase -= 5;
+    baseCase -= 20;
 }
 public void sierpinski(int len, int x, int y) {
   if(len <= baseCase)
