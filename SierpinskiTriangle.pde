@@ -1,23 +1,31 @@
+
 private int len = 400;
 private int baseCase = len;
 private boolean increaseBaseCase = false;
 public void setup(){
   size(500,500);
   background(0);
+  System.out.println(baseCase);
 }
 public void draw(){
   background(0);
   sierpinski(len, 50, 450);
 }
 public void mouseClicked(){
-  if(baseCase <= 0)
+  fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+  if(baseCase <= 3) {
+    baseCase = 3;
     increaseBaseCase = true;
-  if(baseCase >= len)
+  }
+  else if(baseCase >= len) {
     increaseBaseCase = false;
+    baseCase = 400;
+  }
   if(increaseBaseCase)
-    baseCase += 40;
+    baseCase *= 2;
   else
-    baseCase -= 40;
+    baseCase /= 2;
+  System.out.println(baseCase);
 }
 public void sierpinski(int len, int x, int y) {
   if(len <= baseCase)
