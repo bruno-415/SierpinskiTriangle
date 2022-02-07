@@ -5,7 +5,6 @@ private boolean increaseBaseCase = false;
 public void setup(){
   size(500,500);
   background(0);
-  System.out.println(baseCase);
 }
 public void draw(){
   background(0);
@@ -25,7 +24,6 @@ public void mouseClicked(){
     baseCase *= 2;
   else
     baseCase /= 2;
-  System.out.println(baseCase);
 }
 public void sierpinski(int len, int x, int y) {
   if(len <= baseCase)
